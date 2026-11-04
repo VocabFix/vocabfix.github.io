@@ -213,19 +213,27 @@ h2{
   margin-top:12px;
 }
 
-/* TOTAL DOWNLOADS */
+/* COMPACT DOWNLOAD STAT */
 .total-downloads{
-  margin:18px auto 0;
-  text-align:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  margin:16px auto 0;
   color:#64748b;
-  font-size:13px;
+  font-size:14px;
+  line-height:1.4;
+}
+.total-downloads svg{
+  width:17px;
+  height:17px;
+  flex:0 0 17px;
+  color:#94a3b8;
 }
 .total-downloads strong{
-  display:block;
-  color:#168044;
-  font-size:25px;
-  line-height:1.3;
-  font-weight:bold;
+  color:#475569;
+  font-size:15px;
+  font-weight:700;
 }
 
 /* FEATURES */
@@ -439,8 +447,14 @@ Official VocabFix Android Release · v1.0.1
 </div>
 
 <div class="total-downloads" aria-live="polite" aria-label="Total VocabFix APK downloads">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+       stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+    <path d="m7 10 5 5 5-5"/>
+    <path d="M12 15V3"/>
+  </svg>
   <strong id="total-download-count">Loading...</strong>
-  Total Downloads
+  <span>Downloads</span>
 </div>
 
 </div>
