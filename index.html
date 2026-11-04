@@ -1,15 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#101827">
-<title>VocabFix - Official App Download</title>
-<meta name="description" content="Download the official VocabFix Android application. Latest version v1.0.1 with improved vocabulary learning and progress tracking.">
+
+<title>VocabFix - Official Android App</title>
+
+<meta name="description" content="Download VocabFix, an English vocabulary learning app designed for competitive exam preparation.">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
 
 body{
   font-family:Arial,sans-serif;
@@ -17,6 +26,8 @@ body{
   color:#182235;
   line-height:1.6;
 }
+
+/* HEADER */
 
 header{
   background:#101827;
@@ -33,16 +44,27 @@ nav{
 }
 
 .logo{
-  width:43px;height:43px;
+  width:43px;
+  height:43px;
   border:2px solid #d6ad55;
   border-radius:12px;
-  display:grid;place-items:center;
+  display:grid;
+  place-items:center;
   color:#e5bd67;
-  font-size:23px;font-weight:bold;
+  font-size:23px;
+  font-weight:bold;
 }
 
-.brand{font-size:25px;font-weight:bold}
-.gold{color:#e5bd67}
+.brand{
+  font-size:25px;
+  font-weight:bold;
+}
+
+.gold{
+  color:#e5bd67;
+}
+
+/* HERO */
 
 .hero{
   background:linear-gradient(145deg,#101827,#243650);
@@ -63,7 +85,7 @@ nav{
   font-size:17px;
 }
 
-.download{
+.view-update{
   display:inline-block;
   background:#e5bd67;
   color:#152033;
@@ -72,9 +94,13 @@ nav{
   text-decoration:none;
   font-weight:bold;
   font-size:17px;
+  transition:.2s;
 }
 
-.download:active{transform:scale(.97)}
+.view-update:hover{
+  background:#f0ce81;
+  transform:translateY(-2px);
+}
 
 .small{
   color:#cbd5e1;
@@ -82,9 +108,11 @@ nav{
   margin-top:15px;
 }
 
+/* GENERAL SECTION */
+
 section{
   max-width:950px;
-  margin:45px auto;
+  margin:55px auto;
   padding:0 20px;
 }
 
@@ -94,15 +122,15 @@ h2{
   margin-bottom:25px;
 }
 
-/* NEW UPDATE SECTION */
+/* LATEST UPDATE */
 
 .update-card{
   background:white;
   border:1px solid #e5e7eb;
   border-left:5px solid #d6ad55;
-  border-radius:13px;
-  padding:25px;
-  box-shadow:0 4px 15px rgba(0,0,0,.04);
+  border-radius:15px;
+  padding:28px;
+  box-shadow:0 5px 20px rgba(0,0,0,.04);
 }
 
 .update-top{
@@ -111,21 +139,26 @@ h2{
   justify-content:space-between;
   flex-wrap:wrap;
   gap:12px;
-  margin-bottom:15px;
+  margin-bottom:20px;
+}
+
+.update-heading{
+  font-size:27px;
+  font-weight:bold;
 }
 
 .update-badge{
   display:inline-block;
   background:#e7f7ed;
   color:#168044;
-  padding:5px 12px;
+  padding:6px 13px;
   border-radius:20px;
   font-size:12px;
   font-weight:bold;
 }
 
 .update-version{
-  font-size:25px;
+  font-size:27px;
   font-weight:bold;
   margin-bottom:5px;
 }
@@ -133,36 +166,52 @@ h2{
 .update-meta{
   color:#64748b;
   font-size:14px;
-  margin-bottom:18px;
+  margin-bottom:24px;
 }
 
 .update-card h3{
-  font-size:17px;
-  margin-bottom:12px;
+  font-size:19px;
+  margin-bottom:13px;
 }
 
 .update-card ul{
-  padding-left:22px;
+  padding-left:23px;
   color:#475569;
   font-size:15px;
 }
 
 .update-card li{
-  margin-bottom:8px;
+  margin-bottom:11px;
 }
 
-.update-download{
-  display:inline-block;
-  margin-top:20px;
+/* SINGLE DOWNLOAD BUTTON */
+
+.download-update{
+  display:block;
+  width:100%;
+  margin-top:25px;
   background:#101827;
   color:#e5bd67;
-  padding:13px 22px;
-  border-radius:9px;
+  padding:16px 20px;
+  border-radius:10px;
   text-decoration:none;
+  text-align:center;
   font-weight:bold;
+  font-size:17px;
+  transition:.2s;
 }
 
-.update-download:active{transform:scale(.97)}
+.download-update:hover{
+  background:#243650;
+  transform:translateY(-2px);
+}
+
+.download-note{
+  text-align:center;
+  color:#64748b;
+  font-size:12px;
+  margin-top:12px;
+}
 
 /* FEATURES */
 
@@ -174,19 +223,19 @@ h2{
 
 .feature{
   background:white;
-  padding:22px 15px;
+  padding:25px 15px;
   border-radius:13px;
   border:1px solid #e5e7eb;
   text-align:center;
 }
 
 .feature .icon{
-  font-size:30px;
+  font-size:32px;
   margin-bottom:8px;
 }
 
 .feature h3{
-  font-size:17px;
+  font-size:18px;
   margin-bottom:5px;
 }
 
@@ -195,59 +244,114 @@ h2{
   color:#64748b;
 }
 
+/* ABOUT */
+
 .info{
   background:white;
-  padding:25px;
-  border-radius:13px;
+  padding:35px 25px;
+  border-radius:15px;
   text-align:center;
 }
+
+.info p{
+  max-width:600px;
+  margin:auto;
+  color:#475569;
+}
+
+/* FOOTER */
 
 footer{
   background:#101827;
   color:#cbd5e1;
-  padding:28px 15px;
+  padding:30px 15px;
   text-align:center;
   font-size:13px;
 }
 
-footer strong{color:#e5bd67}
+footer strong{
+  color:#e5bd67;
+}
 
 footer a{
   color:#d4af5f;
+  text-decoration:none;
 }
 
+footer a:hover{
+  text-decoration:underline;
+}
+
+/* RESPONSIVE */
+
 @media(min-width:650px){
-  .features{grid-template-columns:repeat(4,1fr)}
+
+  .features{
+    grid-template-columns:repeat(4,1fr);
+  }
+
+  .update-card{
+    padding:35px;
+  }
+
+}
+
+@media(max-width:400px){
+
+  .update-card{
+    padding:20px;
+  }
+
+  .update-heading{
+    font-size:24px;
+  }
+
+  .update-version{
+    font-size:24px;
+  }
+
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
 <nav>
+
 <div class="logo">V</div>
-<div class="brand">Vocab<span class="gold">Fix</span></div>
+
+<div class="brand">
+Vocab<span class="gold">Fix</span>
+</div>
+
 </nav>
 </header>
 
+<!-- HERO -->
+
 <div class="hero">
-<h1>Master English.<br>
-<span class="gold">Fix Your Vocabulary.</span></h1>
+
+<h1>
+Master English.<br>
+<span class="gold">Fix Your Vocabulary.</span>
+</h1>
 
 <p>
 Build your English vocabulary with an organized learning
 experience designed for competitive exam preparation.
 </p>
 
-<a class="download"
-href="https://github.com/VocabFix/vocabfix.github.io/releases/latest/download/Vocabfix_2.apk">
-⬇ Download VocabFix APK
+<a class="view-update" href="#latest-update">
+↓ View Latest Update
 </a>
 
 <div class="small">
-Latest Version: v1.0.1 · APK · 6.9 MB
+Official Android Application · Latest Version v1.0.1
 </div>
+
 </div>
 
 <!-- LATEST UPDATE -->
@@ -257,8 +361,15 @@ Latest Version: v1.0.1 · APK · 6.9 MB
 <div class="update-card">
 
 <div class="update-top">
-<h2 style="margin:0;text-align:left;">Latest Update</h2>
-<span class="update-badge">✦ NEW UPDATE</span>
+
+<div class="update-heading">
+Latest Update
+</div>
+
+<span class="update-badge">
+✦ NEW UPDATE
+</span>
+
 </div>
 
 <div class="update-version">
@@ -272,26 +383,49 @@ Android Application · Update Size: 6.9 MB
 <h3>✨ What's New?</h3>
 
 <ul>
-<li>Learned Words are now sorted by Newest First.</li>
-<li>Bookmarked Words are now sorted by Newest First.</li>
-<li>Recently learned or bookmarked words appear at the top.</li>
-<li>Improved learning progress navigation and usability.</li>
-<li>Enhanced user experience in the Progress section.</li>
+
+<li>
+Learned Words are now sorted by Newest First.
+</li>
+
+<li>
+Bookmarked Words are now sorted by Newest First.
+</li>
+
+<li>
+Recently learned or bookmarked words appear at the top.
+</li>
+
+<li>
+Improved learning progress navigation and usability.
+</li>
+
+<li>
+Enhanced user experience in the Progress section.
+</li>
+
 </ul>
 
-<a class="update-download"
+<a class="download-update"
 href="https://github.com/VocabFix/vocabfix.github.io/releases/latest/download/Vocabfix_2.apk">
-⬇ Download Update · 6.9 MB
+↓ Download Latest APK · 6.9 MB
 </a>
 
+<div class="download-note">
+Official VocabFix Android Release · v1.0.1
 </div>
+
+</div>
+
 </section>
 
 <!-- FEATURES -->
 
 <section>
 
-<h2>Why Choose <span class="gold">VocabFix?</span></h2>
+<h2>
+Why Choose <span class="gold">VocabFix?</span>
+</h2>
 
 <div class="features">
 
@@ -320,9 +454,13 @@ href="https://github.com/VocabFix/vocabfix.github.io/releases/latest/download/Vo
 </div>
 
 </div>
+
 </section>
 
+<!-- ABOUT -->
+
 <section>
+
 <div class="info">
 
 <h2>Start Learning Today</h2>
@@ -332,27 +470,28 @@ Download the official VocabFix Android App and
 take your vocabulary learning to the next level.
 </p>
 
-<br>
-
-<a class="download"
-href="https://github.com/VocabFix/vocabfix.github.io/releases/latest/download/Vocabfix_2.apk">
-⬇ Download APK
-</a>
-
 </div>
+
 </section>
 
+<!-- FOOTER -->
+
 <footer>
-<p>
-<strong>VocabFix</strong> — Your Vocabulary Learning Companion
-</p>
 
 <p>
+<strong>VocabFix</strong> —
+Your Vocabulary Learning Companion
+</p>
+
+<p style="margin-top:10px;">
 <a href="privacy.html">Privacy Policy</a>
 </p>
 
-<p>© 2026 VocabFix. All Rights Reserved.</p>
+<p style="margin-top:10px;">
+© 2026 VocabFix. All Rights Reserved.
+</p>
+
 </footer>
 
 </body>
-</html>
+  </html>
