@@ -312,6 +312,14 @@ footer a:hover{
 
 }
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E0E4DN0P59"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E0E4DN0P59');
+</script>
 </head>
 
 <body>
@@ -406,7 +414,7 @@ Enhanced user experience in the Progress section.
 
 </ul>
 
-<a class="download-update"
+<a id="apk-download" class="download-update"
 href="https://github.com/VocabFix/vocabfix.github.io/releases/latest/download/Vocabfix_2.apk">
 ↓ Download Latest APK · 6.9 MB
 </a>
@@ -492,6 +500,48 @@ Your Vocabulary Learning Companion
 </p>
 
 </footer>
+
+
+<script>
+  // Track APK download-button clicks. This measures click intent, not a confirmed install.
+  (function () {
+    var downloadLink = document.getElementById('apk-download');
+    if (!downloadLink) return;
+
+    downloadLink.addEventListener('click', function (event) {
+      var downloadUrl = downloadLink.href;
+      var fileName = downloadUrl.split('/').pop().split('?')[0] || 'unknown.apk';
+      var versionElement = document.querySelector('.update-version');
+      var versionText = versionElement ? versionElement.textContent : '';
+      var versionMatch = versionText.match(/v?([0-9]+(?:\.[0-9]+)*)/i);
+      var apkVersion = versionMatch ? versionMatch[1] : 'unknown';
+
+      // If the Google tag is unavailable, let the normal download link work.
+      if (typeof window.gtag !== 'function') return;
+
+      event.preventDefault();
+
+      var navigated = false;
+      function continueToDownload() {
+        if (navigated) return;
+        navigated = true;
+        window.location.href = downloadUrl;
+      }
+
+      window.gtag('event', 'apk_download_click', {
+        apk_version: apkVersion,
+        file_name: fileName,
+        link_url: downloadUrl,
+        transport_type: 'beacon',
+        event_callback: continueToDownload,
+        event_timeout: 2000
+      });
+
+      // Fallback so the download is not blocked if the callback does not fire.
+      window.setTimeout(continueToDownload, 2200);
+    });
+  })();
+</script>
 
 </body>
   </html>
