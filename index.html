@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101827">
+<link rel="canonical" href="https://vocabfix.github.io/" />
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<title>VocabFix – English Vocabulary App for BCS &amp; Job Preparation</title>
+
+<meta name="description" content="Learn English vocabulary with VocabFix for BCS, bank and government job exams. Explore word lists, meanings, quizzes and track your learning progress.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VocabFix">
+<meta property="og:title" content="VocabFix – English Vocabulary App for BCS &amp; Job Preparation">
+<meta property="og:description" content="Learn English vocabulary with VocabFix for BCS, bank and government job exams. Explore word lists, meanings, quizzes and track your learning progress.">
+<meta property="og:url" content="https://vocabfix.github.io/">
+<meta property="og:image" content="https://vocabfix.github.io/vocabfix-logo.png">
+<meta property="og:image:alt" content="VocabFix book logo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="VocabFix – English Vocabulary App for BCS &amp; Job Preparation">
+<meta name="twitter:description" content="Learn English vocabulary with VocabFix for BCS, bank and government job exams. Explore word lists, meanings, quizzes and track your learning progress.">
+<meta name="twitter:image" content="https://vocabfix.github.io/vocabfix-logo.png">
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  background:#f5f6fa;
+  color:#182235;
+  line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+  background:#101827;
+  color:white;
+  padding:20px;
+}
+
+nav{
+  max-width:1000px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo{
+  width:48px;
+  height:48px;
+  flex:0 0 48px;
+  display:block;
+  object-fit:contain;
+  border:0;
+  border-radius:10px;
+}
+
+.brand{
+  font-size:25px;
+  font-weight:bold;
+}
+
+.gold{
+  color:#e5bd67;
+}
+
+/* HERO */
+
+.hero{
+  background:linear-gradient(145deg,#101827,#243650);
+  color:white;
+  padding:75px 20px 85px;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:clamp(34px,7vw,55px);
+  margin-bottom:15px;
+}
+
+.hero p{
+  max-width:620px;
+  margin:0 auto 28px;
+  color:#d5dce7;
+  font-size:17px;
+}
+
+.view-update{
+  display:inline-block;
+  background:#e5bd67;
+  color:#152033;
+  padding:16px 30px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:17px;
+  transition:.2s;
+}
+
+.view-update:hover{
+  background:#f0ce81;
+  transform:translateY(-2px);
+}
+
+.small{
+  color:#cbd5e1;
+  font-size:13px;
+  margin-top:15px;
+}
+
+/* GENERAL SECTION */
+
+section{
+  max-width:950px;
+  margin:55px auto;
+  padding:0 20px;
+}
+
+h2{
+  text-align:center;
+  font-size:28px;
+  margin-bottom:25px;
+}
+
+/* LATEST UPDATE */
+
+.update-card{
+  background:white;
+  border:1px solid #e5e7eb;
+  border-left:5px solid #d6ad55;
+  border-radius:15px;
+  padding:28px;
+  box-shadow:0 5px 20px rgba(0,0,0,.04);
+}
+
+.update-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-bottom:20px;
+}
+
+.update-heading{
+  font-size:27px;
+  font-weight:bold;
+}
+
+.update-badge{
+  display:inline-block;
+  background:#e7f7ed;
+  color:#168044;
+  padding:6px 13px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.update-version{
+  font-size:27px;
+  font-weight:bold;
+  margin-bottom:5px;
+}
+
+.update-meta{
+  color:#64748b;
+  font-size:14px;
+  margin-bottom:24px;
+}
+
+.update-card h3{
+  font-size:19px;
+  margin-bottom:13px;
+}
+
+.update-card ul{
+  padding-left:23px;
+  color:#475569;
+  font-size:15px;
+}
+
+.update-card li{
+  margin-bottom:11px;
+}
+
+/* SINGLE DOWNLOAD BUTTON */
+
+.download-update{
+  display:block;
+  width:100%;
+  margin-top:25px;
+  background:#101827;
+  color:#e5bd67;
+  padding:16px 20px;
+  border-radius:10px;
+  text-decoration:none;
+  text-align:center;
+  font-weight:bold;
+  font-size:17px;
+  transition:.2s;
+}
+
+.download-update:hover{
+  background:#243650;
+  transform:translateY(-2px);
+}
+
+.download-note{
+  text-align:center;
+  color:#64748b;
+  font-size:12px;
+  margin-top:12px;
+}
+
+/* COMPACT DOWNLOAD STAT */
+.total-downloads{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  margin:16px auto 0;
+  color:#64748b;
+  font-size:14px;
+  line-height:1.4;
+}
+.total-downloads svg{
+  width:17px;
+  height:17px;
+  flex:0 0 17px;
+  color:#94a3b8;
+}
+.total-downloads strong{
+  color:#475569;
+  font-size:15px;
+  font-weight:700;
+}
+
+/* FEATURES */
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
+
+.feature{
+  background:white;
+  padding:25px 15px;
+  border-radius:13px;
+  border:1px solid #e5e7eb;
+  text-align:center;
+}
+
+.feature .icon{
+  font-size:32px;
+  margin-bottom:8px;
+}
+
+.feature h3{
+  font-size:18px;
+  margin-bottom:5px;
+}
+
+.feature p{
+  font-size:14px;
+  color:#64748b;
+}
+
+/* ABOUT */
+
+.info{
+  background:white;
+  padding:35px 25px;
+  border-radius:15px;
+  text-align:center;
+}
+
+.info p{
+  max-width:600px;
+  margin:auto;
+  color:#475569;
+}
+
+/* FOOTER */
+
+footer{
+  background:#101827;
+  color:#cbd5e1;
+  padding:30px 15px;
+  text-align:center;
+  font-size:13px;
+}
+
+footer strong{
+  color:#e5bd67;
+}
+
+footer a{
+  color:#d4af5f;
+  text-decoration:none;
+}
+
+footer a:hover{
+  text-decoration:underline;
+}
+
+/* RESPONSIVE */
+
+@media(min-width:650px){
+
+  .features{
+    grid-template-columns:repeat(4,1fr);
+  }
+
+  .update-card{
+    padding:35px;
+  }
+
+}
+
+@media(max-width:400px){
+
+  .update-card{
+    padding:20px;
+  }
+
+  .update-heading{
+    font-size:24px;
+  }
+
+  .update-version{
+    font-size:24px;
+  }
+
+}
+
+
+/* APKPURE PROMO */
+.apkpure-promo{
+  margin-top:22px;
+  text-align:center;
+}
+
+.apkpure-promo p{
+  color:#64748b;
+  font-size:14px;
+  margin-bottom:9px;
+}
+
+.apkpure-promo a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  transition:transform .2s;
+}
+
+.apkpure-promo a:hover{
+  transform:translateY(-2px);
+}
+
+.apkpure-promo img{
+  width:135px;
+  height:auto;
+  display:block;
+}
+
+
+/* SEO CONTENT */
+.seo-content{
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:15px;
+  padding:32px 28px;
+}
+.seo-content h2{
+  margin:0 0 16px;
+  text-align:left;
+  font-size:25px;
+}
+.seo-content h3{
+  margin:24px 0 8px;
+  font-size:18px;
+}
+.seo-content p,
+.seo-content li{
+  color:#475569;
+  font-size:15px;
+}
+.seo-content p{margin:0 0 13px;}
+.seo-content ul{padding-left:22px;margin:8px 0 14px;}
+.seo-content li{margin:7px 0;}
+.seo-faq{
+  border-top:1px solid #e5e7eb;
+  padding:13px 0;
+}
+.seo-faq summary{
+  cursor:pointer;
+  font-weight:bold;
+  color:#182235;
+}
+.seo-faq p{margin:9px 0 0;}
+@media(max-width:500px){
+  .seo-content{padding:24px 20px;}
+  .seo-content h2{font-size:22px;}
+}
+
+
+/* PHASE 3 RESOURCE LINKS */
+.feature h3 a{color:#182235;text-decoration:none}
+.feature h3 a:hover{text-decoration:underline;color:#8b681f}
+
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "VocabFix",
+  "url": "https://vocabfix.github.io/",
+  "description": "English vocabulary learning app for BCS, bank and government job exam preparation."
+}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E0E4DN0P59"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E0E4DN0P59');
+</script>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+<nav>
+
+<img class="logo" src="/vocabfix-logo.png" alt="VocabFix logo" width="48" height="48">
+
+<div class="brand">
+Vocab<span class="gold">Fix</span>
+</div>
+
+</nav>
+</header>
+
+<!-- HERO -->
+
+<div class="hero">
+
+<h1>
+English Vocabulary for<br>
+<span class="gold">BCS &amp; Bank Job Preparation</span>
+</h1>
+
+<p>
+Build a stronger English vocabulary with Bangla meanings, synonyms,
+antonyms and quizzes designed for competitive exam preparation.
+</p>
+
+<a class="view-update" href="#latest-update">
+↓ View Latest Update
+</a>
+
+<div class="small">
+Official Android Application · Latest Version v5.1
+</div>
+
+</div>
+
+<!-- LATEST UPDATE -->
+
+<section id="latest-update">
+
+<div class="update-card">
+
+<div class="update-top">
+
+<div class="update-heading">
+Latest Update
+</div>
+
+<span class="update-badge">
+✦ NEW UPDATE
+</span>
+
+</div>
+
+<div class="update-version">
+VocabFix v5.1
+</div>
+
+<div class="update-meta">
+Android Application · Update Size: 6.9 MB
+</div>
+
+<h3>✨ What's New?</h3>
+
+<ul>
+
+<li>
+Learned Words are now sorted by Newest First.
+</li>
+
+<li>
+Bookmarked Words are now sorted by Newest First.
+</li>
+
+<li>
+Recently learned or bookmarked words appear at the top.
+</li>
+
+<li>
+Improved learning progress navigation and usability.
+</li>
+
+<li>
+Enhanced user experience in the Progress section.
+</li>
+
+</ul>
+
+<a id="apk-download" class="download-update"
+href="https://github.com/VocabFix/vocabfix.github.io/releases/latest/download/Vocabfix_2.apk">
+↓ Download Latest APK · 6.9 MB
+</a>
+
+<div class="download-note">
+Official VocabFix Android Release · v5.1
+</div>
+
+<div class="total-downloads" aria-live="polite" aria-label="Total VocabFix APK downloads">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+       stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+    <path d="m7 10 5 5 5-5"/>
+    <path d="M12 15V3"/>
+  </svg>
+  <strong id="total-download-count">Loading...</strong>
+  <span>Downloads</span>
+</div>
+
+</div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section>
+
+<h2>
+Why Choose <span class="gold">VocabFix?</span>
+</h2>
+
+<div class="features">
+
+<div class="feature">
+<div class="icon">📚</div>
+<h3>Browse</h3>
+<p>Explore your vocabulary collection.</p>
+</div>
+
+<div class="feature">
+<div class="icon">📖</div>
+<h3>Categories</h3>
+<p>Learn words through organized categories.</p>
+</div>
+
+<div class="feature">
+<div class="icon">🧠</div>
+<h3>Smart Quiz</h3>
+<p>Test your vocabulary knowledge.</p>
+</div>
+
+<div class="feature">
+<div class="icon">📊</div>
+<h3>Progress</h3>
+<p>Keep track of your learning progress.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- VOCABULARY LEARNING GUIDE -->
+<section>
+  <div class="seo-content">
+    <h2>English Vocabulary for BCS, Bank Jobs &amp; Government Exams</h2>
+    <p>
+      A strong English vocabulary can help candidates handle synonym, antonym
+      and word-meaning questions in competitive examinations. VocabFix is an
+      English vocabulary learning app designed for learners preparing for the
+      Bangladesh Civil Service (BCS), bank recruitment and other government
+      job exams.
+    </p>
+    <p>
+      Learn English words with Bangla meanings and explore related vocabulary
+      through synonyms, antonyms, pronunciation and example sentences. The
+      organized word collections help you study in a structured way instead of
+      memorizing disconnected word lists.
+    </p>
+
+    <h3>Build vocabulary through focused practice</h3>
+    <ul>
+      <li><strong>Word meanings:</strong> Understand English words with Bangla meanings.</li>
+      <li><strong>Synonyms and antonyms:</strong> Study related and opposite words to strengthen word knowledge.</li>
+      <li><strong>Pronunciation and examples:</strong> Connect spelling, sound and usage.</li>
+      <li><strong>Vocabulary quizzes:</strong> Test your understanding and practise recalling meanings.</li>
+      <li><strong>Learning progress:</strong> Keep track of learned and bookmarked words.</li>
+    </ul>
+
+    <h3>Who can use VocabFix?</h3>
+    <p>
+      VocabFix is intended for BCS candidates, bank job aspirants and people
+      preparing for other competitive government recruitment exams. It can
+      also support anyone who wants to improve their English vocabulary with
+      Bangla explanations.
+    </p>
+
+    <h3>Frequently Asked Questions</h3>
+    <div class="seo-faq">
+      <details>
+        <summary>Is VocabFix useful for BCS English vocabulary preparation?</summary>
+        <p>VocabFix provides organized English word collections, Bangla meanings, synonyms, antonyms and quizzes that can support vocabulary practice for BCS preparation.</p>
+      </details>
+    </div>
+    <div class="seo-faq">
+      <details>
+        <summary>Can I use VocabFix for bank job vocabulary practice?</summary>
+        <p>Yes. Its vocabulary learning and quiz features can help bank job candidates practise English word meanings, synonyms and antonyms.</p>
+      </details>
+    </div>
+    <div class="seo-faq">
+      <details>
+        <summary>Does VocabFix show Bangla meanings?</summary>
+        <p>Yes. VocabFix includes Bangla meanings to help Bengali-speaking learners understand English vocabulary.</p>
+      </details>
+    </div>
+    <div class="seo-faq">
+      <details>
+        <summary>How can I track the words I have studied?</summary>
+        <p>Use the Progress section to review learned words and bookmarked words.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<!-- PHASE 3: DEDICATED SEO RESOURCES -->
+<section aria-labelledby="vocabfix-resources">
+  <div class="seo-content">
+    <h2 id="vocabfix-resources">Explore Vocabulary Learning Guides</h2>
+    <p>Choose a guide based on your learning goal. Each page covers a different vocabulary-learning need and offers practical study guidance.</p>
+    <div class="features">
+      <div class="feature"><h3><a href="/learning-manual.html">Learning Manual for VocabFix</a></h3><p>Learn how to use VocabFix and follow its complete vocabulary-learning guidelines.</p></div>
+      <div class="feature"><h3><a href="/bcs-vocabulary.html">BCS English Vocabulary</a></h3><p>Meanings, synonyms, antonyms, spelling and word usage for BCS preparation.</p></div>
+      <div class="feature"><h3><a href="/bank-job-vocabulary.html">Bank Job Vocabulary</a></h3><p>Practical English vocabulary guidance for bank recruitment candidates.</p></div>
+      <div class="feature"><h3><a href="/english-vocabulary-bangla-meaning.html">Vocabulary with Bangla Meaning</a></h3><p>Learn meanings, context, pronunciation and related words.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+
+<section>
+
+<div class="info">
+
+<h2>Start Learning Today</h2>
+
+<p>
+Download the official VocabFix Android App and
+take your vocabulary learning to the next level.
+</p>
+
+
+<div class="apkpure-promo">
+  <p>Also get it on</p>
+  <a href="https://apkpure.com/p/com.webapp.mimahadi.uffe"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Get VocabFix on APKPure">
+    <img
+      src="assets/apkpure-logo.webp"
+      alt="APKPure Logo">
+  </a>
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+<strong>VocabFix</strong> —
+Your Vocabulary Learning Companion
+</p>
+
+<p style="margin-top:10px;">
+<a href="privacy.html">Privacy Policy</a>
+</p>
+
+<p style="margin-top:10px;">
+© 2026 VocabFix. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<script>
+  // Track APK download-button clicks. This measures click intent, not a confirmed install.
+  (function () {
+    var downloadLink = document.getElementById('apk-download');
+    if (!downloadLink) return;
+
+    downloadLink.addEventListener('click', function (event) {
+      var downloadUrl = downloadLink.href;
+      var fileName = downloadUrl.split('/').pop().split('?')[0] || 'unknown.apk';
+      var versionElement = document.querySelector('.update-version');
+      var versionText = versionElement ? versionElement.textContent : '';
+      var versionMatch = versionText.match(/v?([0-9]+(?:\.[0-9]+)*)/i);
+      var apkVersion = versionMatch ? versionMatch[1] : 'unknown';
+
+      // If the Google tag is unavailable, let the normal download link work.
+      if (typeof window.gtag !== 'function') return;
+
+      event.preventDefault();
+
+      var navigated = false;
+      function continueToDownload() {
+        if (navigated) return;
+        navigated = true;
+        window.location.href = downloadUrl;
+      }
+
+      window.gtag('event', 'apk_download_click', {
+        apk_version: apkVersion,
+        file_name: fileName,
+        link_url: downloadUrl,
+        transport_type: 'beacon',
+        event_callback: continueToDownload,
+        event_timeout: 2000
+      });
+
+      // Fallback so the download is not blocked if the callback does not fire.
+      window.setTimeout(continueToDownload, 2200);
+    });
+  })();
+</script>
+
+<script>
+  // Show one combined total for all APK assets across public GitHub Releases.
+  (function () {
+    var countElement = document.getElementById('total-download-count');
+    if (!countElement) return;
+
+    var apiUrl = 'https://api.github.com/repos/VocabFix/vocabfix.github.io/releases?per_page=100';
+    var cacheKey = 'vocabfix_total_apk_downloads_v1';
+    var cacheDuration = 15 * 60 * 1000; // Refresh at most once every 15 minutes per browser.
+
+    function showCount(total) {
+      countElement.textContent = Number(total).toLocaleString();
+    }
+
+    try {
+      var cached = JSON.parse(localStorage.getItem(cacheKey) || 'null');
+      if (cached && Number.isFinite(cached.total) &&
+          Date.now() - cached.savedAt < cacheDuration) {
+        showCount(cached.total);
+        return;
+      }
+    } catch (error) {
+      // Continue with a fresh public API request if browser storage is unavailable.
+    }
+
+    function fetchAllReleases(page, collected) {
+      return fetch(apiUrl + '&page=' + page, {
+        headers: { 'Accept': 'application/vnd.github+json' }
+      })
+        .then(function (response) {
+          if (!response.ok) throw new Error('GitHub API request failed');
+          return response.json();
+        })
+        .then(function (releases) {
+          if (!Array.isArray(releases)) throw new Error('Unexpected GitHub API response');
+          var allReleases = collected.concat(releases);
+          return releases.length === 100
+            ? fetchAllReleases(page + 1, allReleases)
+            : allReleases;
+        });
+    }
+
+    fetchAllReleases(1, [])
+      .then(function (releases) {
+        var total = releases.reduce(function (sum, release) {
+          var assets = Array.isArray(release.assets) ? release.assets : [];
+          return sum + assets.reduce(function (assetSum, asset) {
+            return /\.apk$/i.test(asset.name || '')
+              ? assetSum + (Number(asset.download_count) || 0)
+              : assetSum;
+          }, 0);
+        }, 0);
+
+        showCount(total);
+        try {
+          localStorage.setItem(cacheKey, JSON.stringify({
+            total: total,
+            savedAt: Date.now()
+          }));
+        } catch (error) {
+          // The live count remains visible even if browser storage is unavailable.
+        }
+      })
+      .catch(function () {
+        countElement.textContent = 'Unavailable';
+      });
+  })();
+</script>
+
+</body>
+  </html>
